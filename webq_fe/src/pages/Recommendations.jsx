@@ -12,7 +12,8 @@ import {
   Video,
   FileText,
   Star,
-  RotateCcw
+  RotateCcw,
+  Eye
 } from 'lucide-react';
 import { useApp } from '../context/appContext';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -29,6 +30,8 @@ const Recommendations = () => {
     setError 
   } = useApp();
 
+  console.log(recommendations)
+
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -37,7 +40,7 @@ const Recommendations = () => {
       case 'completed':
         return <CheckCircle className="h-5 w-5 text-green-600" />;
       case 'viewed':
-        return <Play className="h-5 w-5 text-blue-600" />;
+        return <Eye className="h-5 w-5 text-blue-600" />;
       default:
         return <Clock className="h-5 w-5 text-gray-400" />;
     }
@@ -276,12 +279,14 @@ const Recommendations = () => {
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${getDifficultyColor(recommendation.resource.difficulty_level)}`}>
                       {recommendation.resource.difficulty_level}
                     </span>
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${getDifficultyColor("bg-green-50 text-green-700 border-green-200")}`}>
+                      # {recommendation.resource.recommendation_priority}
+                    </span>
                   </div>
                   
                   <p className="text-gray-600 mb-4">
                     {recommendation.resource.description || 'No description available'}
                   </p>
-                  
                   <div className="flex items-center justify-between">
                     <span className={`px-3 py-1 text-sm font-medium rounded-full border ${getStatusColor(recommendation.status)}`}>
                       {getStatusIcon(recommendation.status)}
