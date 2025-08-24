@@ -55,8 +55,8 @@ if the backend is up and running you can just connect to the hosted frontend : [
 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/learning-paths-dashboard.git
-cd learning-paths-dashboard
+git clone https://github.com/avin-madhu/webq_react_frontend.git
+cd webq_fe
 ```
 
 2. Install dependencies
