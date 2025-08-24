@@ -1,4 +1,4 @@
-# Student Learning Recommendation System (Frontend) 
+# Student Learning Recommendation System ( FRONTEND ) 
 
 A React + Tailwind web application that helps students track their **performance**, get **personalized recommendations**, and explore **learning resources**.  
 
