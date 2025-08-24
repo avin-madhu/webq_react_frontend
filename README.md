@@ -3,7 +3,7 @@
 A React + Tailwind web application that helps students track their **performance**, get **personalized recommendations**, and explore **learning resources**.  
 
 Built with:  
-- ⚛React  
+- React  
 - Tailwind CSS  
 - React Router  
 - Context API (global state management)  
