@@ -35,7 +35,8 @@ Built with:
 ```bash
 src/
 │── App.jsx                 # Main app with routes
-│── AppContext.jsx          # Context provider (students, performance, resources)
+│── Context/
+|   |── appContext          # Context provider (students, performance, resources)
 │── components/             # Reusable components
 │   ├── Header.jsx
 │   ├── PerformanceCard.jsx
@@ -46,7 +47,8 @@ src/
 │   ├── DashboardPage.jsx
 │   ├── RecommendationsPage.jsx
 │   └── ResourceDetailPage.jsx
-│── apiService.js           # API service (students, resources, recommendations)
+│── api/
+|   |──apiService.js           # API service (students, resources, recommendations)
 ```
 ## Setup and Installation
 
